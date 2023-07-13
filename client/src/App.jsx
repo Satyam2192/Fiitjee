@@ -7,6 +7,10 @@ import Result from "./pages/Results";
 import OurMission from "./pages/OurMission";
 import WhyIPEC from "./pages/WhyIPEC";
 import Registration from "./components/Registration";
+import Home from "./pages/Home";
+import Course from "./pages/Course";
+import CourseDetails from "./pages/CourseDetails";
+import ContactUs from "./pages/Contact-us";
 // import Registration from "./components/Registration";
 
 const App = () => {
@@ -18,12 +22,15 @@ const App = () => {
       <BrowserRouter>
         <Header />
         <Routes>
+          <Route path="/" element={<Home />} /> 
           <Route path="/about" element={<About />} />
           <Route path="/results" element={<Result />} />
           <Route path="/mission" element={<OurMission />} />
           <Route path="/why" element={<WhyIPEC />} />
           <Route path="/registration" element={<Registration />} />
-          {/* <Route path="*" element={<Error />} /> */}
+          <Route path="/course" element={<Course />} />
+          <Route path="/courseDetails" element={<CourseDetails />} />
+          <Route path="/contact" element={<ContactUs />} />
         </Routes>
         <Footer />
       </BrowserRouter>
