@@ -2,12 +2,14 @@ import React from "react";
 
 const WhyIPEC = () => {
   return (
-    <div className="flex items-center justify-center min-h-screen">
+    <div>
       <div className="py-10 max-w-6xl mx-auto px-4">
-        <div className="text-center">
-          <h2 className="text-3xl font-bold mb-4 text-indigo-900 border-b-[6px] border-yellow-400">
-            VMC EDGE
-          </h2>
+        <div className="">
+          <div className="flex justify-center ">
+            <h2 className="text-3xl font-bold mb-4 text-indigo-900 border-b-[6px] border-yellow-400">
+              VMC EDGE
+            </h2>
+          </div>
         </div>
         <div className="grid grid-cols-2 gap-9 p-4 mt-4">
           <div className="flex flex-row items-center mx-8">
