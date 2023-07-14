@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import Logo from '../assets/logo.jpg'
 
 function Header() {
@@ -16,7 +16,7 @@ function Header() {
     {name: 'contact us', link: '/contact'}
   ]
   return (
-    <div className='mb-10'>
+    <div>
           <div className='h-[85px] bg-white flex items-center justify-between px-8'>
         <div className='h-[75px] w-auto'>
           <img src={Logo} alt="logo" className='h-[75px]' />
@@ -34,9 +34,9 @@ function Header() {
       {/* lower nav */}
       <div className='h-[35px] bg-[#E9ECF5] flex gap-6 items-center justify-center px-auto'>
         {lowernav.map(navItem => 
-        <Link to={navItem.link} key={navItem.link}>
+        <NavLink to={navItem.link} key={navItem.link} >
           <div className="text-sm text-[#1f1d5a] font-medium uppercase cursor-pointer">{navItem.name}</div>
-        </Link>
+        </NavLink>
         )}  
       </div>
     </div>

@@ -89,10 +89,10 @@ const Registration = () => {
     };
 
     return (
-        <div className='flex items-center justify-center w-full p-4'>
+        <div className='flex items-center justify-center w-full p-4 py-10 bg-[#d1e9f9]'>
         <div>
 
-        <div className='max-w-[1444px] border py-6 px-12 shadow-lg'>
+        <div className='max-w-[1444px] border py-6 px-12 shadow-lg bg-white'>
             
         <h1 className=' text-3xl text-[#1f1d5a] font-bold text-center'>
         REGISTRATION FORM

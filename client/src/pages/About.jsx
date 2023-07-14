@@ -2,11 +2,14 @@ import React from "react";
 
 function About() {
   return (
-    <div className="max-w-6xl px-4 py-10 mx-auto">
+    <div className="bg-[#d1e9f9]">
+      
+    
+    <div className="max-w-6xl px-4 py-10 mx-auto ">
       <div className="">
         <div className="flex justify-center ">
-          <h2 className="text-3xl font-bold mb-4 text-indigo-900 border-b-[6px] border-yellow-400">
-            IPEC EDGE
+          <h2 className="text-3xl font-bold mb-4 900 border-b-[6px] border-yellow-400">
+            ABOUT IPEC 
           </h2>
         </div>
         <p className="text-[16px] leading-relaxed text-center ">
@@ -16,7 +19,7 @@ function About() {
           thereby create an environment that not only guides students to the
           path of success but also inspires them to recognize and explore their
           own potential.{" "}
-          <p className="font-semibold ">
+          <p className="mt-2 font-semibold">
             The fact that more than 1,00,000 students appear every year for the
             IPEC Test for the limited seats on offer is ample testimony to IPEC's
             popularity and credence within the IITJEE, NEET &amp; FOUNDATION
@@ -33,7 +36,7 @@ function About() {
       <div className="py-10 text-center">
         <div className="container px-4 mx-auto">
           <div className="flex justify-center ">
-            <h2 className="text-3xl font-bold mb-4 text-indigo-900 border-b-[6px] border-yellow-400">
+            <h2 className="text-3xl font-bold mb-4 border-b-[6px] border-yellow-400">
               IPEC ADVANTAGE
             </h2>
           </div>
@@ -128,7 +131,7 @@ function About() {
         <div className="container px-4 mx-auto">
           <div>
             <div className="flex justify-center ">
-              <h2 className="text-3xl font-bold mb-4 text-indigo-900 border-b-[6px] border-yellow-400">
+              <h2 className="text-3xl font-bold mb-4 border-b-[6px] border-yellow-400">
                 IPEC Pedagogy
               </h2>
             </div>
@@ -187,6 +190,7 @@ function About() {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 }

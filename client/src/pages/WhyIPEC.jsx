@@ -17,7 +17,7 @@ const WhyIPEC = () => {
           thereby create an environment that not only guides students to the
           path of success but also inspires them to recognize and explore their
           own potential.{" "}
-          <p className="font-semibold ">
+          <p className="mt-4 font-semibold">
             The fact that more than 1,00,000 students appear every year for the
             IPEC Test for the limited seats on offer is ample testimony to IPEC's
             popularity and credence within the IITJEE, NEET &amp; FOUNDATION

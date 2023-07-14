@@ -40,7 +40,7 @@ function Footer() {
   ]  
 
   return (
-      <div className="bg-[#343362] w-full mt-10">
+      <div className="bg-[#343362] w-full">
         {/* upper foot */}
         <div className="flex items-center justify-center py-8">
 
