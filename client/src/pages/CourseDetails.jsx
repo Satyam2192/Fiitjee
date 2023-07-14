@@ -5,25 +5,25 @@ function CourseDetails() {
   return (
     <div>
     <div className="flex items-center justify-center w-screen">
-      <div className="max-w-6xl mx-4 md:mx-auto p-8 bg-gradient-to-b from-gray-100 to-gray-50 shadow-2xl rounded-2xl">
-        <h1 className="text-5xl font-bold mb-6">Course Details</h1>
-        <hr className="border-gray-400 mb-6" />
+      <div className="max-w-6xl p-8 mx-4 border shadow-xl md:mx-auto bg-gradient-to-b from-gray-100 to-gray-50 rounded-2xl">
+        <h1 className="mb-6 text-3xl font-bold text-[#1c1950]">Course Details</h1>
+        <hr className="mb-6 border-gray-400" />
         <div className="flex mb-6">
-          <h2 className="border-r pr-14 mr-12 font-bold  text-3xl flex-shrink-0" style={{color : "#1c1950"}}>
+          <h2 className="flex-shrink-0 mr-12 text-2xl font-bold border-r pr-14" style={{color : "#1c1950"}}>
             Class Schedule
           </h2>
-          <div className="flex-grow text-2xl pl-12 mr-7 font-mono text-gray-700 mb-10 "  style={{color: "#1c1950"}}>
+          <div className="flex-grow pl-6 mb-5 font-mono text-xl text-gray-700"  style={{color: "#1c1950"}}>
             <i className="far fa-calendar"></i> <strong> 12 To 14 Hrs/Week By Founders & Their Core Team</strong>
           </div>
         </div>
-        <div className="flex flex-col md:flex-row mb-6">
-          <h2 className="border-r pr-14 mr-12 font-bold  text-3xl flex-shrink-0" style={{color : "#1c1950"}}>
+        <div className="flex flex-col mb-6 md:flex-row">
+          <h2 className="flex-shrink-0 mr-12 text-2xl font-bold border-r pr-14" style={{color : "#1c1950"}}>
             Study  Content
           </h2>
-          <div className="flex-grow text-2xl mb-4">
-            <ul className="list-unstyled pl-8 ">
-              <li className="mb-2 font-mono " style={{color: "#1c1950"}}><strong>Comprehensive Study Material</strong></li>
-              <li className="mb-2 font-mono" style={{color: "#1c1950"}}>
+          <div className="flex-grow mb-4">
+            <ul className="pl-8 list-unstyled ">
+              <li className="mb-2 font-mono text-xl" style={{color: "#1c1950"}}><strong>Comprehensive Study Material</strong></li>
+              <li className="mb-2 font-mono text-lg" style={{color: "#1c1950"}}>
                 Comprehensive Study Material Physics - 6 Modules + 6 Workbooks
                 Chemistry - 6 Modules + 6 Workbooks Mathematics - 6 Modules +
                 6 Workbooks Solutions - Modules 6(PC) and Workbooks 6(PCM) Final
@@ -34,12 +34,12 @@ function CourseDetails() {
             </ul>
           </div>
         </div>
-        <div className="flex flex-col md:flex-row mb-6">
-          <h2 className="border-r pr-14 mr-12 font-bold  text-3xl flex-shrink-0" style={{color : "#1c1950"}}>
+        <div className="flex flex-col mb-6 md:flex-row">
+          <h2 className="flex-shrink-0 mr-12 text-2xl font-bold border-r pr-14" style={{color : "#1c1950"}}>
             Comprehensive <br /> Practise & <br /> Assesment
           </h2>
-          <div className="flex-grow text-2xl mb-4">
-            <ul className="list-unstyled pl-4">
+          <div className="flex-grow mb-4 text-xl">
+            <ul className="pl-4 list-unstyled">
               <li className="mb-2 font-mono" style={{color: "#1c1950"}}>Non Academic Mentors</li>
               <li className="mb-2 font-mono" style={{color: "#1c1950"}}>Recorded School Support Classes</li>
               <li className="mb-2 font-mono" style={{color: "#1c1950"}}>
@@ -51,44 +51,51 @@ function CourseDetails() {
             </ul>
           </div>
         </div>
-      </div>
-      </div>
-
-
-      <div className=" mt-8">
-  <div className="max-w-6xl mx-4 w-full md:mx-auto p-8 bg-gradient-to-b from-gray-100 to-gray-50 shadow-2xl rounded-2xl">
-    <h1 className="text-5xl font-bold mb-6">Payment Plans</h1>
-    <hr className="border-gray-400 mb-6" />
-    <div
-      className="max-w-6xl items-start mx-4 md:mx-auto p-16 w-96 rounded-2xl bg-gradient-to-b from-gray-300 to-gray-50 shadow-2xl"
-      style={{ color: "#fff", background: "#1f1e5a" }}
-    >
-      <div style={{ width: 200, borderRadius: 10 }}>
-        <h1 className="text-3xl font-bold mb-6 mx-14 w-24" style={{ color: "#fff", lineHeight: 1.2 }}>
-          Course Package
-        </h1>
-        <div className="flex justify-between mt-6">
-          <div>
-            <h2 className="text-xl font-bold text-thin">$1,000</h2>
-            <p className="text-sm">Actual Fee</p>
-          </div>
-          <div>
-            <h2 className="text-xl font-bold text-thin">$890</h2>
-            <p className="text-sm" style={{ background: "#17a2b8" }}>
-              Save 11%
-            </p>
-          </div>
         </div>
       </div>
-      <button className="px-6 py-2 bg-primary text-white font-bold" style={{ background: "#ffca08" }}>
-        Pay Now
-      </button>
+
+
+    <div className="mt-8">
+      <div className="w-full max-w-6xl p-8 mx-4 shadow-2xl md:mx-auto bg-gradient-to-b from-gray-100 to-gray-50 rounded-2xl">
+        <h1 className="mb-6 text-3xl font-bold">Payment Plans</h1>
+        <hr className="mb-6 border-gray-400" />
+        
+        <div
+          className="items-start p-8 shadow-2xl w-96 rounded-2xl bg-gradient-to-b from-gray-300 to-gray-50"
+          style={{ color: "#fff", background: "#1f1e5a" }}
+        >
+
+          <div>
+            <h1 className="mb-6 text-2xl font-bold ">
+              Course Package
+            </h1>
+            <div className="flex justify-between mt-6">
+              <div>
+                <p className="text-sm">Actual Fee</p>
+               <div className="flex gap-4 items-cetner">
+                <div className="flex items-baseline gap-3">
+                  <h2 className="text-xl font-bold line-through text-thin">$1,000</h2>
+                    <h2 className="text-xl font-bold text-thin">$890</h2>
+                    <p className="text-[10px]">Excluded GST*</p>
+                </div>
+                <div className="bg-[#17a2b8] p-1 rounded text-center text-[12px]">
+                    Save 11%
+                  </div>
+               </div>
+              </div>
+            </div>
+          </div>
+          
+          <button className="px-6 py-2 mt-5 font-bold text-white bg-yellow-400 rounded" >
+            Pay Now
+          </button>
+        </div>
+        
+      </div>
     </div>
+
+
   </div>
-</div>
-
-
-    </div>
   );
 }
 

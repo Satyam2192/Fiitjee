@@ -4,6 +4,7 @@ import Logo from '../assets/logo.jpg'
 
 function Header() {
   const lowernav = [
+    {name: 'home', link: '/'},
     {name: 'mission', link: '/mission'},
     {name: 'course', link: '/course'},
     {name: 'result', link: '/results'},
@@ -12,7 +13,6 @@ function Header() {
     {name: 'about ipec', link: '/about'},
     {name: 'why ipec', link: '/why'},
     {name: 'registration form', link: '/registration'},
-    {name: 'home', link: '/'},
     {name: 'contact us', link: '/contact'}
   ]
   return (
@@ -23,11 +23,11 @@ function Header() {
         </div>
         <div className='flex items-center gap-4 text-[12px]'>
           <div className='relative flex items-center gap-4 font-bold text-red-700'>
-            <div className="duration-200 scale-100 scale-105 linear">RESGISTER FOR NTA</div>
+            <div className="duration-200 linear">RESGISTER FOR NTA</div>
             <div>VMC CENTERS</div>
             <span className='absolute w-[2px] h-[20px] text-red-700 bg-red-700 left-[58%] top-0'></span>
           </div>
-          <div className='px-3 py-1 bg-yellow-400 rounded'>ADMISSION TEST RESULT</div>
+          <div className='px-3 py-1 bg-yellow-400 text-[#1f1d5a] font-medium rounded'>ADMISSION TEST RESULT</div>
         </div>
       </div>
 

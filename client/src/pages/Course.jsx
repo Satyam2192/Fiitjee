@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "../styles/Course.css";
 import CourseDetails from "./CourseDetails";
+import { Link } from "react-router-dom";
 
 function Course() {
   const [table1Data] = useState([
@@ -22,211 +23,110 @@ function Course() {
 
 
   return (
-    <div className="container mx-auto">
-      <div className="flex flex-col md:flex-row mb-10">
-
-        <div className="md:w-1/4">
-          <div className="box-group">
-            <div className="box font-bold yellow-size bg-yellow-400 box1 small-height">
-              <span className="box-content">7</span>
-            </div>
-            <div className="mt-1 font-bold box2">
-              <span className="box-content blue-box">BEGINNER</span>
-            </div>
-          </div>
-        </div>
-
-        <div className="md:w-3/4 border-[1px] border-black/20">
-          <div className="row mb-5">
-            <div className="col-md-12">
-              <table className="table">
-                <thead>
-                  <tr>
-                    <th className="bg-danger py-2 text-white bg-red-500 text-center" colSpan={2}>
-                      Olympaids: IOQJS, INAO, IAO, NSO, NSEJS
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {table1Data.map((row, index) => (
-                    <tr key={index}>
-                      <td className="font-bold mt-5 px-4 py-1">{row.column1}</td>
-                      <td>{row.column2}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-              <div className="flex justify-end">
-                <button className="bg-yellow-400 mt-5 mx-4 py-2 px-4 rounded-[4px] border border-[#1f1d5a]" onClick={() => <CourseDetails/>} >
-                  Registrations
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
+    <div className="flex items-center justify-center ">
+      <div className="max-w-5xl">
         
-      </div>
-      <div className="flex flex-col md:flex-row mb-10">
-        <div className="md:w-1/4">
-          <div className="box-group">
-            <div className="box font-bold yellow-size bg-yellow-400 box1 small-height">
-              <span className="box-content">7</span>
-            </div>
-            <div className="mt-1 font-bold box2">
-              <span className="box-content blue-box">BEGINNER</span>
-            </div>
-          </div>
-        </div>
-        <div className="md:w-3/4">
-          <div className="row mb-5">
+      
+      <div className="flex flex-col mb-10 md:flex-row border-[1px] border-black/10 rounded-[16px] shadow-lg">
+          <div className="mb-5 row">
             <div className="col-md-12">
               <table className="table">
                 <thead>
                   <tr>
-                    <th className="bg-danger text-white bg-red-500 w-3 text-center" colSpan={2}>
+                    <th className="py-3 text-center text-white bg-[#1f1d5a] rounded-t-[16px]" colSpan={2}>
                       Olympaids: IOQJS, INAO, IAO, NSO, NSEJS
                     </th>
                   </tr>
                 </thead>
-                <tbody>
+                {/* added to give top margin between head and body */}
+                <div className="mt-5"></div>
+                <tbody className="">
                   {table1Data.map((row, index) => (
                     <tr key={index}>
-                      <td className="font-bold mt-5">{row.column1}</td>
+                      <td className="px-4 py-1 mt-5 font-bold">{row.column1}</td>
                       <td>{row.column2}</td>
                     </tr>
                   ))}
                 </tbody>
               </table>
               <div className="flex justify-end">
-                <button className="bg-yellow-400 mt-5 me-5" onClick={() => <CourseDetails/>}>
+                <Link to='/courseDetails'>
+                <button className="bg-yellow-400 hover:bg-[#1f1d5a] hover:text-yellow-300 hover:font-bold mt-5 mx-4 py-2 px-4 rounded-[4px] border border-[#1f1d5a] cursor-pointer" onClick={() => <CourseDetails/>} >
                   Registrations
                 </button>
+                </Link>
               </div>
             </div>
           </div>
-        </div>
       </div>
-      <div className="flex flex-col md:flex-row mb-10">
-        <div className="md:w-1/4">
-          <div className="box-group">
-            <div className="box font-bold yellow-size bg-yellow-400 box1 small-height">
-              <span className="box-content">7</span>
-            </div>
-            <div className="mt-1 font-bold box2">
-              <span className="box-content blue-box">BEGINNER</span>
-            </div>
-          </div>
-        </div>
-        <div className="md:w-3/4">
-          <div className="row mb-5">
+
+      <div className="flex flex-col mb-10 md:flex-row border-[1px] border-black/10 rounded-[16px]">
+          <div className="mb-5 row">
             <div className="col-md-12">
               <table className="table">
                 <thead>
                   <tr>
-                    <th className="bg-danger text-white bg-red-500 text-center" colSpan={2}>
+                    <th className="py-3 text-center text-white bg-[#1f1d5a] rounded-t-[16px]" colSpan={2}>
                       Olympaids: IOQJS, INAO, IAO, NSO, NSEJS
                     </th>
                   </tr>
                 </thead>
-                <tbody>
+                {/* added to give top margin between head and body */}
+                <div className="mt-5"></div>
+                <tbody className="">
                   {table1Data.map((row, index) => (
                     <tr key={index}>
-                      <td className="font-bold mt-5">{row.column1}</td>
+                      <td className="px-4 py-1 mt-5 font-bold">{row.column1}</td>
                       <td>{row.column2}</td>
                     </tr>
                   ))}
                 </tbody>
               </table>
               <div className="flex justify-end">
-                <button className="bg-yellow-400 mt-5 me-5" onClick={() => logTableValues(table1Data)}>
+                <Link to='/courseDetails'>
+                <button className="bg-yellow-400 hover:bg-[#1f1d5a]  hover:text-yellow-300 hover:font-bold mt-5 mx-4 py-2 px-4 rounded-[4px] border border-[#1f1d5a] cursor-pointer" onClick={() => <CourseDetails/>} >
                   Registrations
                 </button>
+                </Link>
               </div>
             </div>
           </div>
-        </div>
       </div>
-      <div className="flex flex-col md:flex-row mb-10">
-        <div className="md:w-1/4">
-          <div className="box-group">
-            <div className="box font-bold yellow-size bg-yellow-400 box1 small-height">
-              <span className="box-content">7</span>
-            </div>
-            <div className="mt-1 font-bold box2">
-              <span className="box-content blue-box">BEGINNER</span>
-            </div>
-          </div>
-        </div>
-        <div className="md:w-3/4">
-          <div className="row mb-5">
+
+      <div className="flex flex-col mb-10 md:flex-row border-[1px] border-black/10 rounded-[16px]">
+          <div className="mb-5 row">
             <div className="col-md-12">
               <table className="table">
                 <thead>
                   <tr>
-                    <th className="bg-danger text-white bg-red-500 text-center" colSpan={2}>
+                    <th className="py-3 text-center text-white bg-[#1f1d5a] rounded-t-[16px]" colSpan={2}>
                       Olympaids: IOQJS, INAO, IAO, NSO, NSEJS
                     </th>
                   </tr>
                 </thead>
-                <tbody>
+                {/* added to give top margin between head and body */}
+                <div className="mt-5"></div>
+                <tbody className="">
                   {table1Data.map((row, index) => (
                     <tr key={index}>
-                      <td className="font-bold mt-5">{row.column1}</td>
+                      <td className="px-4 py-1 mt-5 font-bold">{row.column1}</td>
                       <td>{row.column2}</td>
                     </tr>
                   ))}
                 </tbody>
               </table>
               <div className="flex justify-end">
-                <button className="bg-yellow-400 mt-5 me-5" onClick={() => logTableValues(table1Data)}>
+                <Link to='/courseDetails'>
+                <button className="bg-yellow-400 hover:bg-[#1f1d5a]  hover:text-yellow-300 hover:font-bold mt-5 mx-4 py-2 px-4 rounded-[4px] border border-[#1f1d5a] cursor-pointer" onClick={() => <CourseDetails/>} >
                   Registrations
                 </button>
+                </Link>
               </div>
             </div>
           </div>
-        </div>
       </div>
-      <div className="flex flex-col md:flex-row mb-10">
-        <div className="md:w-1/4">
-          <div className="box-group">
-            <div className="box font-bold yellow-size bg-yellow-400 box1 small-height">
-              <span className="box-content">7</span>
-            </div>
-            <div className="mt-1 font-bold box2">
-              <span className="box-content blue-box">BEGINNER</span>
-            </div>
-          </div>
-        </div>
-        <div className="md:w-3/4">
-          <div className="row mb-5">
-            <div className="col-md-12">
-              <table className="table">
-                <thead>
-                  <tr>
-                    <th className="bg-danger text-white bg-red-500 text-center" colSpan={2}>
-                      Olympaids: IOQJS, INAO, IAO, NSO, NSEJS
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {table1Data.map((row, index) => (
-                    <tr key={index}>
-                      <td className="font-bold mt-5">{row.column1}</td>
-                      <td>{row.column2}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-              <div className="flex justify-end">
-                <button className="bg-yellow-400 mt-5 me-5" onClick={() => logTableValues(table1Data)}>
-                  Registrations
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      ╬
+      
+      ╬</div>
     </div>
   );
 }
