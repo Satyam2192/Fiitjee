@@ -16,6 +16,7 @@ const Registration = () => {
         motherNumber: '',
         dob: '',
         category: '',
+        gender: '',
         addressLine1: '',
         addressLine2: '',
         addressLine3: '',
@@ -40,6 +41,7 @@ const Registration = () => {
             motherNumber: '',
             dob: '',
             category: '',
+            gender: '',
             addressLine1: '',
             addressLine2: '',
             addressLine3: '',
@@ -49,10 +51,6 @@ const Registration = () => {
             message: '',
         });
     };
-
-    useEffect(() => {
-        setIsVisible(true);
-    }, []);
 
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -90,10 +88,9 @@ const Registration = () => {
         clearInputs();
     };
 
-
     return (
-        <>
-            <form>
+        <div className='m-20'>
+            <form onSubmit={handleSubmit}>
                 <div className="grid md:grid-cols-2 md:gap-6">
                     <div className="relative z-0 w-full mb-6 group">
                         <input
@@ -295,8 +292,8 @@ const Registration = () => {
                                 id="bordered-radio-6"
                                 type="radio"
                                 value="male"
-                                name="bordered-radio"
-                                checked={gender === "male"}
+                                name="gender"
+                                checked={formData.gender === "male"}
                                 onChange={handleChange}
                                 className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600 mt-6"
                             />
@@ -312,8 +309,8 @@ const Registration = () => {
                                 id="bordered-radio-7"
                                 type="radio"
                                 value="female"
-                                name="bordered-radio"
-                                checked={gender === "female"}
+                                name="gender"
+                                checked={formData.gender === "female"}
                                 onChange={handleChange}
                                 className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600 mt-6"
                             />
@@ -325,6 +322,7 @@ const Registration = () => {
                             </label>
                         </div>
                     </div>
+
                 </div>
 
                 <div className="grid md:grid-cols-2 md:gap-6">
@@ -450,7 +448,7 @@ const Registration = () => {
                 </div>
 
 
-                <form onSubmit={handleSubmit}>
+                <form>
                     <div className="relative z-0 w-full mb-6 group">
                         <input
                             type="email"
@@ -580,13 +578,13 @@ const Registration = () => {
 
                 <button
                     type="submit"
-                    className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                    className="my-10 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                     onSubmit={handleSubmit}
                 >
                     Submit
                 </button>
             </form>
-        </>
+        </div>
     )
 };
 
