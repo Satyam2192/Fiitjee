@@ -6,7 +6,7 @@ import About from "./pages/About";
 import Result from "./pages/Results";
 import OurMission from "./pages/OurMission";
 import WhyIPEC from "./pages/WhyIPEC";
-import Registration from "./components/Registration";
+import Registration from "./pages/Registration";
 import Home from "./pages/Home";
 import Course from "./pages/Course";
 import CourseDetails from "./pages/CourseDetails";
