@@ -1,116 +1,121 @@
-import { Carousel, Typography, Button } from "@material-tailwind/react";
- 
-export default function Example() {
+import React from 'react';
+import image2 from '../assets/carousel-2.jpg';
+import image3 from '../assets/carousel-3.jpg';
+
+const carousel = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const handlePrevSlide = () => {
+    setCurrentSlide((prev) => (prev === 0 ? 2 : prev - 1));
+  };
+
+  const handleNextSlide = () => {
+    setCurrentSlide((prev) => (prev === 2 ? 0 : prev + 1));
+  };
   return (
-    <Carousel className="rounded-xl">
-      <div className="relative w-full h-full">
-        <img
-          src="https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2560&q=80"
-          alt="image 1"
-          className="object-cover w-full h-full"
-        />
-        <div className="absolute inset-0 grid w-full h-full place-items-center bg-black/75">
-          <div className="w-3/4 text-center md:w-2/4">
-            <Typography
-              variant="h1"
-              color="white"
-              className="mb-4 text-3xl md:text-4xl lg:text-5xl"
+    <>
+      <div>
+        <div
+          id="default-carousel"
+          className="relative w-full"
+          data-carousel="slide"
+        >
+          <div className="relative h-56 overflow-hidden rounded-lg md:h-96">
+            <div
+              className={`transform ${currentSlide === 0 ? 'translate-x-0' : 'translate-x-full'
+                } duration-700 ease-in-out`}
+              data-carousel-item
             >
-              The Beauty of Nature
-            </Typography>
-            <Typography
-              variant="lead"
-              color="white"
-              className="mb-12 opacity-80"
-            >
-              It is not so much for its beauty that the forest makes a claim
-              upon men&apos;s hearts, as for that subtle something, that
-              quality of air that emanation from old trees, that so
-              wonderfully changes and renews a weary spirit.
-            </Typography>
-            <div className="flex justify-center gap-2">
-              <Button size="lg" color="white">
-                Explore
-              </Button>
-              <Button size="lg" color="white" variant="text">
-                Gallery
-              </Button>
+              <img
+                src={image2}
+                className="absolute block w-full top-0 left-0 h-full object-cover"
+                alt="Slide 2"
+              />
             </div>
+            <div
+              className={`transform ${currentSlide === 1 ? 'translate-x-0' : 'translate-x-full'
+                } duration-700 ease-in-out`}
+              data-carousel-item
+            >
+              <img
+                src={image3}
+                className="absolute block w-full top-0 left-0 h-full object-cover"
+                alt="Slide 3"
+              />
+            </div>
+
           </div>
+
+          <div className="absolute z-30 flex space-x-3 bottom-5 left-1/2 transform -translate-x-1/2">
+            <button
+              type="button"
+              className={`w-3 h-3 rounded-full ${currentSlide === 0 ? 'bg-white' : 'bg-gray-400'
+                }`}
+              aria-current={currentSlide === 0}
+              aria-label="Slide 1"
+              data-carousel-slide-to="0"
+            ></button>
+            <button
+              type="button"
+              className={`w-3 h-3 rounded-full ${currentSlide === 1 ? 'bg-white' : 'bg-gray-400'
+                }`}
+              aria-current={currentSlide === 1}
+              aria-label="Slide 2"
+              data-carousel-slide-to="1"
+            ></button>
+            <button
+              type="button"
+              className={`w-3 h-3 rounded-full ${currentSlide === 2 ? 'bg-white' : 'bg-gray-400'
+                }`}
+              aria-current={currentSlide === 2}
+              aria-label="Slide 3"
+              data-carousel-slide-to="2"
+            ></button>
+          </div>
+
+          <button
+            type="button"
+            className="absolute top-1/2 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+            data-carousel-prev
+            onClick={handlePrevSlide}
+          >
+            {/* Add your SVG for the previous button here */}
+            <span
+              className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+              <svg
+                className="w-4 h-4 text-white dark:text-gray-800"
+                aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 6 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4" />
+              </svg>
+              <span className="sr-only">Previous</span>
+            </span>
+          </button>
+          <button
+            type="button"
+            className="absolute top-1/2 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+            data-carousel-next
+            onClick={handleNextSlide}
+          >
+            {/* Add your SVG for the next button here */}
+            <span
+              className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+              <svg
+                className="w-4 h-4 text-white dark:text-gray-800"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 6 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4" />
+              </svg>
+              <span className="sr-only">Next</span>
+            </span>
+          </button>
         </div>
       </div>
-      <div className="relative w-full h-full">
-        <img
-          src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80"
-          alt="image 2"
-          className="object-cover w-full h-full"
-        />
-        <div className="absolute inset-0 grid items-center w-full h-full bg-black/75">
-          <div className="w-3/4 pl-12 md:w-2/4 md:pl-20 lg:pl-32">
-            <Typography
-              variant="h1"
-              color="white"
-              className="mb-4 text-3xl md:text-4xl lg:text-5xl"
-            >
-              The Beauty of Nature
-            </Typography>
-            <Typography
-              variant="lead"
-              color="white"
-              className="mb-12 opacity-80"
-            >
-              It is not so much for its beauty that the forest makes a claim
-              upon men&apos;s hearts, as for that subtle something, that
-              quality of air that emanation from old trees, that so
-              wonderfully changes and renews a weary spirit.
-            </Typography>
-            <div className="flex gap-2">
-              <Button size="lg" color="white">
-                Explore
-              </Button>
-              <Button size="lg" color="white" variant="text">
-                Gallery
-              </Button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="relative w-full h-full">
-        <img
-          src="https://images.unsplash.com/photo-1518623489648-a173ef7824f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2762&q=80"
-          alt="image 3"
-          className="object-cover w-full h-full"
-        />
-        <div className="absolute inset-0 grid items-end w-full h-full bg-black/75">
-          <div className="w-3/4 pb-12 pl-12 md:w-2/4 md:pl-20 md:pb-20 lg:pl-32 lg:pb-32">
-            <Typography
-              variant="h1"
-              color="white"
-              className="mb-4 text-3xl md:text-4xl lg:text-5xl"
-            >
-              The Beauty of Nature
-            </Typography>
-            <Typography
-              variant="lead"
-              color="white"
-              className="mb-12 opacity-80"
-            >
-              It is not so much for its beauty that the forest makes a claim
-              upon men&apos;s hearts, as for that subtle something, that
-              quality of air that emanation from old trees, that so
-              wonderfully changes and renews a weary spirit.
-            </Typography>
-            <div className="flex gap-2">
-              <Button size="lg" color="white">
-                Explore
-              </Button>
-              <Button size="lg" color="white" variant="text">
-                Gallery
-              </Button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </Carousel>
-  );
+    </>
+  )
 }
+
+export default carousel;

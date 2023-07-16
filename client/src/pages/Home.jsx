@@ -4,7 +4,6 @@ import AIR from '../assets/air.png'
 import ClassroomImg1 from '../assets/classroom-1.jpg'
 import ClassroomImg2 from '../assets/classroom-2.jpg'
 import { Carousel } from "@material-tailwind/react";
-import CarouselImg1 from '../assets/carousel-1.jpg'
 import CarouselImg2 from '../assets/carousel-2.jpg'
 import CarouselImg3 from '../assets/carousel-3.jpg'
 
@@ -14,11 +13,6 @@ function Home() {
 
     <div className=''>
       <Carousel autoplay={true} loop={true} className="w-full bg-orange-200 rounded-xl">
-        <img
-        src={CarouselImg1}
-          alt="image 1"
-          className="object-cover w-[1200px] h-[530px]"
-        />
         <img
         src={CarouselImg2}
           alt="image 2"
@@ -58,7 +52,7 @@ function Home() {
      
 
       {/* experience */}
-      <div className='my-10'>
+      <div className='my-10 bg-[#d1e9f9] py-10'>
         <h1 className='text-3xl text-[#1f1d5a] font-bold text-center'>OUR TRAILBLAZERS SHARE THEIR EXPERIENCE</h1>
         <div className='flex items-center justify-center py-8'> 
           <div className='grid grid-cols-3 gap-8'>
