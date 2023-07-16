@@ -2,7 +2,7 @@ import React from "react";
 
 const WhyIPEC = () => {
   return (
-    <div>
+    <div className="bg-[#d1e9f9] my-10">
       <div className="max-w-6xl px-4 py-5 mx-auto">
       <div className="">
         <div className="flex justify-center ">
